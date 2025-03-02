@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramadan Mubarak!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f8f9fa;
+        }
+        h1 {
+            color: #28a745;
+        }
+        h2{
+            color: #28a745;
+        }
+        img {
+            align-items: center;
+            width: 250px
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="greeting">Ramadan Mubarak!</h1>
+    <h2>From Zohairqain Haider </h2>
+    <p>May this Ramadan bring peace, happiness, and blessings to you and your family. 🌙✨</p>
+    <img src="./eid-ramadan-mubarak-with-arabic-calligraphy-vector-32743282.jpg" alt="">
+    <script>
+        function getQueryParam(name) {
+            const params = new URLSearchParams(window.location.search);
+            return params.get(name);
+        }
+
+        const userName = getQueryParam('name');
+        if (userName) {
+            document.getElementById("greeting").textContent = `Ramadan Mubarak, ${userName}!`;
+        }
+    </script>
+</body>
+</html>
